@@ -17,7 +17,10 @@ export default function InstagramLogin() {
   const onLogin = async (event) => {
     event.preventDefault();
     console.log(data);
-    const response = await axios.post("http://localhost:8080/login", data);
+    const response = await axios.post(
+      "https://instagram-rftd.onrender.com/login",
+      data
+    );
     console.log(response.data.message);
   };
 

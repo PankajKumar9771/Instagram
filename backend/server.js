@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import User from "./Schema.js";
 
+const PORT = process.env.PORT || 5000;
 dotenv.config();
 const app = express();
 
@@ -36,6 +37,6 @@ app.post("/login", (req, res) => {
   res.status(200).json({ message: "data accepted" });
 });
 
-app.listen(8080, () => {
+app.listen(PORT, () => {
   console.log("Server is running");
 });
